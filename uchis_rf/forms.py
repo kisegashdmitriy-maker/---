@@ -117,6 +117,9 @@ class ApplicationForm(forms.ModelForm):
     PAYMENT_CHOICES = [
         ('cash', 'Наличными'),
         ('transfer', 'Перевод по номеру телефона'),
+        ('qr_prepayment', 'Предоплата по QR-коду'),
+        ('mir_card', 'Оплата картой МИР'),
+        ('office_postpayment', 'Постоплата в офисе организации'),
     ]
 
     payment_method = forms.ChoiceField(
@@ -130,8 +133,11 @@ class ApplicationForm(forms.ModelForm):
 
     class Meta:
         model = Application
-        fields = ['preferred_date', 'payment_method']
+        fields = ['course_name', 'preferred_date', 'payment_method']
         widgets = {
+            'course_name': forms.Select(attrs={
+                'class': 'form-select form-select-lg'
+            }),
             'preferred_date': forms.DateInput(
                 attrs={
                     'class': 'form-control form-control-lg',
@@ -141,6 +147,7 @@ class ApplicationForm(forms.ModelForm):
             ),
         }
         labels = {
+            'course_name': 'Наименование курса *',
             'preferred_date': 'Желаемая дата начала обучения *',
         }
 

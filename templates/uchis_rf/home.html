@@ -7,48 +7,48 @@
 <section class="py-3">
     <div class="container">
         <div id="heroSlider" class="carousel slide hero-slider" data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="carousel-inner" style="max-height: 300px;">
+            <div class="carousel-inner">
                 <!-- Слайд 1 -->
                 <div class="carousel-item active">
-                    <img src="/media/88-gHQq11R0.jpg"
-                         class="d-block w-100" alt="Онлайн обучение" style="height: 300px; object-fit: cover;">
+                    <div class="slider-image-wrapper">
+                        <img src="/media/Group 7.jpg"
+                             class="d-block w-100 slider-image"
+                             alt="Онлайн обучение">
+                    </div>
                     <div class="carousel-caption">
-                        <h2 class="fw-bold">Повышение квалификации</h2>
-                        <p class="d-none d-md-block">Получите новые знания и навыки без отрыва от работы</p>
-                        <a href="{% url 'uchis_rf:courses' %}" class="btn btn-primary btn-lg mt-2">Выбрать курс</a>
                     </div>
                 </div>
 
                 <!-- Слайд 2 -->
                 <div class="carousel-item">
-                    <img src="/media/1678694971_sa.jpg"
-                         class="d-block w-100" alt="Дистанционное обучение" style="height: 300px; object-fit: cover;">
+                    <div class="slider-image-wrapper">
+                        <img src="/media/Group 6.jpg"
+                             class="d-block w-100 slider-image"
+                             alt="Дистанционное обучение">
+                    </div>
                     <div class="carousel-caption">
-                        <h2 class="fw-bold">Дистанционное обучение</h2>
-                        <p class="d-none d-md-block">Учитесь в любое время и в любом месте</p>
-                        <a href="{% url 'uchis_rf:register' %}" class="btn btn-success btn-lg mt-2">Начать обучение</a>
                     </div>
                 </div>
 
                 <!-- Слайд 3 -->
                 <div class="carousel-item">
-                    <img src="/media/hero.png"
-                         class="d-block w-100" alt="Сертификаты" style="height: 300px; object-fit: cover;">
+                    <div class="slider-image-wrapper">
+                        <img src="/media/Group 4.jpg"
+                             class="d-block w-100 slider-image"
+                             alt="Сертификаты">
+                    </div>
                     <div class="carousel-caption">
-                        <h2 class="fw-bold">Официальные сертификаты</h2>
-                        <p class="d-none d-md-block">Получите документы государственного образца</p>
-                        <a href="{% url 'uchis_rf:courses' %}" class="btn btn-warning btn-lg mt-2">Смотреть курсы</a>
                     </div>
                 </div>
 
                 <!-- Слайд 4 -->
                 <div class="carousel-item">
-                    <img src="/media/все-курсы.jpg"
-                         class="d-block w-100" alt="Охрана труда" style="height: 300px; object-fit: cover;">
+                    <div class="slider-image-wrapper">
+                        <img src="/media/Group 5.jpg"
+                             class="d-block w-100 slider-image"
+                             alt="Охрана труда">
+                    </div>
                     <div class="carousel-caption">
-                        <h2 class="fw-bold">Охрана труда</h2>
-                        <p class="d-none d-md-block">Обучение по охране труда для всех категорий работников</p>
-                        <a href="{% url 'uchis_rf:courses' %}" class="btn btn-info btn-lg mt-2">Узнать больше</a>
                     </div>
                 </div>
             </div>
@@ -209,6 +209,26 @@
             <i class="bi bi-person-plus me-2"></i>Зарегистрироваться
         </a>
         {% endif %}
+    </div>
+</section>
+
+<!-- Контактная информация -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h5>Наше местонахождение</h5>
+                <p><strong>Адрес головного офиса:</strong> г. Москва, ул. Большая Ордынка, д. 15</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Контактная информация</h5>
+                <p><strong>Телефон горячей линии:</strong> +7 (495) 123-45-67</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Вопросы и пожелания</h5>
+                <p>Если возникли вопросы или пожелания, позвоните нам. Ответим оперативно и подробно.</p>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}

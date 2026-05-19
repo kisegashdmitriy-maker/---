@@ -75,6 +75,9 @@ class Application(models.Model):
     PAYMENT_CHOICES = [
         ('cash', 'Наличными'),
         ('transfer', 'Перевод по номеру телефона'),
+        ('qr_prepayment', 'Предоплата по QR-коду'),
+        ('mir_card', 'Оплата картой МИР'),
+        ('office_postpayment', 'Постоплата в офисе организации'),
     ]
 
     user = models.ForeignKey(

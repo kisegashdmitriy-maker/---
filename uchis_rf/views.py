@@ -107,12 +107,10 @@ def apply_for_course(request):
     """Формирование заявки"""
     if request.method == 'POST':
         form = ApplicationForm(request.POST)
-        course_name = request.POST.get('course_name')
-
-        if course_name and form.is_valid():
+        if form.is_valid():
             application = form.save(commit=False)
             application.user = request.user
-            application.course_name = course_name
+            application.course_name = form.cleaned_data['course_name']
             application.save()
             messages.success(request, 'Ваша заявка отправлена на рассмотрение администратору!')
             return redirect('uchis_rf:profile')
